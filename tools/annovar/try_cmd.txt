@@ -1,0 +1,1 @@
+perl table_annovar.pl ./cel_vcf/demo.txt celdb/ --outfile final --buildver cel --protocol refGene --operation g

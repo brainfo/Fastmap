@@ -1,0 +1,62 @@
+Usage:
+     retrieve_seq_from_fasta.pl [arguments] <regionfile>
+
+     Optional arguments:
+            -v, --verbose                   use verbose output
+            -h, --help                      print help message
+            -m, --man                       print complete documentation
+                --format <string>           format of the regionfile
+                --outfile <file>            output file name (default: input.fa)
+                --seqdir <directory>        directory containing sequence files for genomes
+                --seqfile <file>            sequence file name
+                --tabout                    use tab-delimited output (default is FASTA file)
+                --altchr                    process alternative haplotype chromosome (default: OFF)
+                --[no]addchr                add chr prefix to region specification (default: ON)
+
+     Function: reformat sequences at specific genomic positions from whole-genome FASTA files
+
+     Example: retrieve_seq_from_fasta.pl -format tab -seqdir humandb/ region.tabinput
+              retrieve_seq_from_fasta.pl -format tab -seqfile chrall.fa region.tabinput
+              retrieve_seq_from_fasta.pl -format simple -seqdir humandb/ region.input
+              retrieve_seq_from_fasta.pl -format refGene -seqdir humandb hg18_refGenet.txt
+              retrieve_seq_from_fasta.pl -format genericGene -seqdir humandb/ hg18_gencodeGene.txt
+
+     Version:$Date: 2015-12-14 13:51:19 -0800 (Mon, 14 Dec 2015) $
+
+Options:
+    --help  print a brief help message and exit
+
+    --man   print the complete manual of how to use the program
+
+    --verbose
+            use verbose output
+
+    --format
+            specify the format of the input file (default: tab). Other
+            supported formats include simple, refGene, knownGene, ensGene,
+            genericGene and many other format support will be added in the
+            future.
+
+    --outfile
+            specify the output file name (default: <input>.fa)
+
+    --seqdir
+            specify the directory of the sequence files (usually these
+            sequence files are organized by chromosomes, and that the file
+            name represent the chromosome).
+
+    --seqfile
+            specify the sequence file name (assuming that all sequences are
+            stored within a single file).
+
+    --tabout
+            use tab-delimited output. By default, FASTA file will be printed
+            out.
+
+    --altchr
+            process alternative haplotype chromosome, that look like
+            chr6_cox_hap1. By default this will not be processed.
+
+    --(no)addchr
+            add chr prefix to region if it is not present (default: ON)
+
