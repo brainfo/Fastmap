@@ -1,1 +1,3 @@
-# Janes_Fastmap
+# Fastmap
+created by brainfo
+submit from Janes
